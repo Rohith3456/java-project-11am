@@ -1,0 +1,108 @@
+              Common Git Commands
+
+Git Init=this command is used to initalize a new git repository
+
+git clone=this command is used to create a copy of a remote repository on your local machine
+
+git add=this command is used to changes for untracked to staged for stage changes for commit
+
+git commit=this command is used to save changes to the repository
+
+git status=this command is usedcheck the current status of the repository
+
+git diff=this command is used to show difference between the current version of a file last commiitted version
+
+git log=this command is used to display the commit historyof a repository
+
+git branch=this command is used to create , list or delete the branches in the repoistory
+--------------------------------------------------------------------------------
+git merge=this command is used to merge changes from the one branch to another branch because it allows developers to combine the changes made in the different branches and stored in the mani branches
+
+git pull=this command is used to the retrive chnages from the remote repositoryand merge with the local copy [local ---->   remote] repository
+
+git push=this command is do the upload changes to remote repository  [remote  ----> local] repository
+--------------------------------------------------------------------------------
+
+git diff:
+---------
+git diff is a command-line tool in git that shows the differences between various states of a repository.it helps developers see what changes have been made, whether they are between working directory and the staging area between the staging area and the last commit, or between any two commands.
+
+there are four types of the git diff there are 
+
+1. working area vs staging area
+2. working area vs commit area 
+3. staging area vs commit area
+4. between any of the arbitary commits
+5. between local repo vs remote reppo
+
+-------------------------------------------------------------------------------
+    installation process of git diff
+   -----------------------------------
+it is for the the file was the extracted steps
+
+* after installing the perforce to compress it [command is "gunzip <file-name>"]
+
+* after we compress it it shows the ".tar", after this we should done a xtract command is ["tar xvf"] here from this command is x is a xtract and v is a verbose
+f is a target
+
+
+-------------------------------------------------------------------------------
+
+1) why we use the git differential operations, how does the git knows that it has to particularly look for p4 merge?
+
+answer: for the reason we have to configure this before module tool, but this module too  integrate with git software
+-------------------------------------------------------------------------------
+
+for find out the diff operation where the location was locates command is 
+
+       [config --global diff.p4mege.path /usr/local/bin/p4merge]
+
+we can directly  perform a diff operations by using the p4 merge 
+but best pratice to perform the diff operation through git 
+
+git gives the input to tha p4 merge and p4 merge gives the outputs
+
+to stop the p4merge command is [git config --global difftool.promt false]
+
+if you want the config file manually the command is
+         
+          [git config --global --list]
+
+it displays the directly of the contact of which user is running specific command
+
+if we want to edit the of user contact details then the command is 
+
+          [git config --global -e]
+
+-------------------------------------------------------------------------------
+now theritical part
+-------------------
+
+1)  working area vs staging area:
+    -----------------------------                                 
+                                [git diff] this command for the CLI
+                                [git difftool] this command for the GUI
+
+       so get [diff command] is actually for comparing the difference between the working area versus staging area
+
+
+2) working area vs commit area:
+   ----------------------------                           
+                               [git diff HEAD] 
+
+       so this command is comparing with the difference between the working areaversus commit area
+
+3) staging area vs commit area:
+   ----------------------------
+                              [git diff --staged HEAD]
+                              [git diff --cached HEAD]
+
+       so this command is comparing with the difference between the staged area and commit area
+
+
+
+
+
+
+
+
